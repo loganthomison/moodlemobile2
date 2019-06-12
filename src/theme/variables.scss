@@ -55,7 +55,7 @@ $core-color-light: lighten($core-color, 10%) !default;
 $core-color-dark: darken($core-color, 10%) !default;
 
 $core-course-image-background: #81ecec, #74b9ff, #a29bfe, #dfe6e9, #00b894,
-    #0984e3, #b2bec3, #fdcb6e, #fd79a8, #6c5ce7 !default;
+  #0984e3, #b2bec3, #fdcb6e, #fd79a8, #6c5ce7 !default;
 
 // Shared Variables
 // --------------------------------------------------
@@ -76,19 +76,19 @@ $content-padding: 10px;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-    primary: $core-color,
-    secondary: $turquoise,
-    danger: $red,
-    light: $gray-lighter,
-    gray: $gray-dark,
-    dark: $black,
-    warning: $yellow,
-    success: $green,
-    info: $blue,
-    inverted: (
-        base: $white,
-        contrast: $core-color,
-    ),
+  primary: $core-color,
+  secondary: $turquoise,
+  danger: $red,
+  light: $gray-lighter,
+  gray: $gray-dark,
+  dark: $black,
+  warning: $yellow,
+  success: $green,
+  info: $blue,
+  inverted: (
+    base: $white,
+    contrast: $core-color,
+  ),
 );
 
 $text-color: $black !default;
@@ -113,7 +113,7 @@ $text-input-highlight-color-valid: $green !default;
 $text-input-highlight-color-invalid: $red !default;
 
 $button-md-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 $refresher-icon-color: $core-color !default;
 
@@ -126,6 +126,8 @@ $note-color: $gray-dark !default;
 $popover-width: 280px !default;
 $item-divider-background: $gray-lighter !default;
 $item-divider-color: $black !default;
+
+$core-star-color: $core-color !default;
 
 // Moodle Mobile variables
 // --------------------------------------------------
@@ -261,6 +263,8 @@ $core-rte-min-height: 80px;
 
 $core-toolbar-button-image-width: 32px;
 
+$core-text-hightlight-background-color: lighten($blue, 40%) !default;
+
 // Timer variables.
 $core-timer-warn-color: $red !default;
 $core-timer-iterations: 15 !default;
@@ -282,213 +286,211 @@ $core-question-state-incorrect-color: $red-light !default;
 
 $core-dd-question-selected-shadow: 2px 2px 4px $gray-dark !default;
 $core-dd-question-colors: $white, $blue-light, #dcdcdc, #d8bfd8, #87cefa,
-    #daa520, #ffd700, #f0e68c !default;
+  #daa520, #ffd700, #f0e68c !default;
 
 // Mixins
 // -------------------------
 @mixin core-transition($where: all, $time: 500ms) {
-    -webkit-transition: $where $time ease-in-out;
-    -moz-transition: $where $time ease-in-out;
-    -ms-transition: $where $time ease-in-out;
-    -o-transition: $where $time ease-in-out;
-    transition: $where $time ease-in-out;
+  -webkit-transition: $where $time ease-in-out;
+  -moz-transition: $where $time ease-in-out;
+  -ms-transition: $where $time ease-in-out;
+  -o-transition: $where $time ease-in-out;
+  transition: $where $time ease-in-out;
 }
 
 @mixin push-arrow-color($color) {
-    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z' fill='#{$color}'/></svg>") !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z' fill='#{$color}'/></svg>") !important;
 }
 
 @mixin border-start($px, $type, $color) {
-    @include ltr() {
-        border-left: $px $type $color;
-    }
+  @include ltr() {
+    border-left: $px $type $color;
+  }
 
-    @include rtl() {
-        border-right: $px $type $color;
-    }
+  @include rtl() {
+    border-right: $px $type $color;
+  }
 }
 
 @mixin border-end($px, $type, $color) {
-    @include ltr() {
-        border-right: $px $type $color;
-    }
+  @include ltr() {
+    border-right: $px $type $color;
+  }
 
-    @include rtl() {
-        border-left: $px $type $color;
-    }
+  @include rtl() {
+    border-left: $px $type $color;
+  }
 }
 
 @mixin safe-area-border-start($px, $type, $color) {
-    $safe-area-position: calc(constant(safe-area-inset-left) + #{$px});
-    $safe-area-position-env: calc(env(safe-area-inset-left) + #{$px});
+  $safe-area-position: calc(constant(safe-area-inset-left) + #{$px});
+  $safe-area-position-env: calc(env(safe-area-inset-left) + #{$px});
 
-    @include border-start($px, $type, $color);
-    @media screen and (orientation: landscape) {
-        @include border-start($safe-area-position, $type, $color);
-        @include border-start($safe-area-position-env, $type, $color);
-    }
+  @include border-start($px, $type, $color);
+  @media screen and (orientation: landscape) {
+    @include border-start($safe-area-position, $type, $color);
+    @include border-start($safe-area-position-env, $type, $color);
+  }
 }
 
 @mixin safe-area-border-end($px, $type, $color) {
-    $safe-area-position: calc(constant(safe-area-inset-right) + #{$px});
-    $safe-area-position-env: calc(env(safe-area-inset-right) + #{$px});
+  $safe-area-position: calc(constant(safe-area-inset-right) + #{$px});
+  $safe-area-position-env: calc(env(safe-area-inset-right) + #{$px});
 
-    @include border-end($px, $type, $color);
-    @media screen and (orientation: landscape) {
-        @include border-end($safe-area-position, $type, $color);
-        @include border-end($safe-area-position-env, $type, $color);
-    }
+  @include border-end($px, $type, $color);
+  @media screen and (orientation: landscape) {
+    @include border-end($safe-area-position, $type, $color);
+    @include border-end($safe-area-position-env, $type, $color);
+  }
 }
 
 @mixin safe-area-padding-start($start, $end) {
-    $safe-area-start: calc(constant(safe-area-inset-left) + #{$start});
-    $safe-area-start-env: calc(env(safe-area-inset-left) + #{$start});
+  $safe-area-start: calc(constant(safe-area-inset-left) + #{$start});
+  $safe-area-start-env: calc(env(safe-area-inset-left) + #{$start});
 
-    @include padding-horizontal($start, $end);
+  @include padding-horizontal($start, $end);
 
-    @media screen and (orientation: landscape) {
-        @include padding-horizontal($safe-area-start, $end);
-        @include padding-horizontal($safe-area-start-env, $end);
-    }
+  @media screen and (orientation: landscape) {
+    @include padding-horizontal($safe-area-start, $end);
+    @include padding-horizontal($safe-area-start-env, $end);
+  }
 }
 
 @mixin safe-area-padding-end($start, $end) {
-    $safe-area-end: calc(constant(safe-area-inset-right) + #{$end});
-    $safe-area-end-env: calc(env(safe-area-inset-right) + #{$end});
+  $safe-area-end: calc(constant(safe-area-inset-right) + #{$end});
+  $safe-area-end-env: calc(env(safe-area-inset-right) + #{$end});
 
-    @include padding-horizontal($start, $end);
+  @include padding-horizontal($start, $end);
 
-    @media screen and (orientation: landscape) {
-        @include padding-horizontal($start, $safe-area-end);
-        @include padding-horizontal($start, $safe-area-end-env);
-    }
+  @media screen and (orientation: landscape) {
+    @include padding-horizontal($start, $safe-area-end);
+    @include padding-horizontal($start, $safe-area-end-env);
+  }
 }
 
 @mixin horizontal_scroll_item($width, $min-width, $max-width) {
-    flex: 0 0 $width;
-    min-width: $min-width;
-    max-width: $max-width;
-    align-self: stretch;
-    display: block;
+  flex: 0 0 $width;
+  min-width: $min-width;
+  max-width: $max-width;
+  align-self: stretch;
+  display: block;
 
-    &.card-md,
-    .card-md {
-        height: calc(100% - #{($card-md-margin-bottom + $card-md-margin-top)});
-        width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
-    }
-    &.card-ios,
-    .card-ios {
-        height: calc(
-            100% - #{($card-ios-margin-bottom + $card-ios-margin-top)}
-        );
-        width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
-    }
-    &.card-wp,
-    .card-wp {
-        height: calc(100% - #{($card-wp-margin-bottom + $card-wp-margin-top)});
-        width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
-    }
-    &.card-md {
-        margin-top: $card-md-margin-top;
-        margin-bottom: $card-md-margin-bottom;
-    }
-    &.card-ios {
-        margin-top: $card-ios-margin-top;
-        margin-bottom: $card-ios-margin-bottom;
-    }
-    &.card-wp {
-        margin-top: $card-wp-margin-top;
-        margin-bottom: $card-wp-margin-bottom;
-    }
+  &.card-md,
+  .card-md {
+    height: calc(100% - #{($card-md-margin-bottom + $card-md-margin-top)});
+    width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
+  }
+  &.card-ios,
+  .card-ios {
+    height: calc(100% - #{($card-ios-margin-bottom + $card-ios-margin-top)});
+    width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
+  }
+  &.card-wp,
+  .card-wp {
+    height: calc(100% - #{($card-wp-margin-bottom + $card-wp-margin-top)});
+    width: calc(100% - #{($card-md-margin-end + $card-md-margin-start)});
+  }
+  &.card-md {
+    margin-top: $card-md-margin-top;
+    margin-bottom: $card-md-margin-bottom;
+  }
+  &.card-ios {
+    margin-top: $card-ios-margin-top;
+    margin-bottom: $card-ios-margin-bottom;
+  }
+  &.card-wp {
+    margin-top: $card-wp-margin-top;
+    margin-bottom: $card-wp-margin-bottom;
+  }
 
-    &.card,
-    .card {
-        @media (max-width: 360px) {
-            margin-left: 6px;
-            margin-right: 6px;
-            width: calc(100% - 12px);
-        }
+  &.card,
+  .card {
+    @media (max-width: 360px) {
+      margin-left: 6px;
+      margin-right: 6px;
+      width: calc(100% - 12px);
     }
+  }
 
-    [text-wrap] .label {
-        h2,
-        p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+  [text-wrap] .label {
+    h2,
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 }
 
 @mixin core-headings() {
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 2.8rem;
-    }
-    h3 {
-        font-size: 2.6rem;
-    }
-    h4 {
-        font-size: 2.2rem;
-    }
-    h5 {
-        font-size: 1.8rem;
-    }
-    h6 {
-        font-size: 1.4rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+  h4 {
+    font-size: 2.2rem;
+  }
+  h5 {
+    font-size: 1.8rem;
+  }
+  h6 {
+    font-size: 1.4rem;
+  }
 }
 
 @mixin core-as-items() {
-    .item-md.item-block > .item-inner {
-        border-bottom: 1px solid $list-md-border-color;
-    }
+  .item-md.item-block > .item-inner {
+    border-bottom: 1px solid $list-md-border-color;
+  }
 
-    .item-ios.item-block > .item-inner {
-        border-bottom: $hairlines-width solid $list-ios-border-color;
-    }
+  .item-ios.item-block > .item-inner {
+    border-bottom: $hairlines-width solid $list-ios-border-color;
+  }
 
-    .item-wp.item-block > .item-inner {
-        border-bottom: 1px solid $list-wp-border-color;
-    }
+  .item-wp.item-block > .item-inner {
+    border-bottom: 1px solid $list-wp-border-color;
+  }
 
-    &:last-child .item > .item-inner {
-        border-bottom: 0;
-    }
+  &:last-child .item > .item-inner {
+    border-bottom: 0;
+  }
 }
 
 @mixin core-items() {
-    &.item-md.item-block > .item-inner {
-        border-bottom: 1px solid $list-md-border-color;
-    }
+  &.item-md.item-block > .item-inner {
+    border-bottom: 1px solid $list-md-border-color;
+  }
 
-    &.item-ios.item-block > .item-inner {
-        border-bottom: $hairlines-width solid $list-ios-border-color;
-    }
+  &.item-ios.item-block > .item-inner {
+    border-bottom: $hairlines-width solid $list-ios-border-color;
+  }
 
-    &.item-wp.item-block > .item-inner {
-        border-bottom: 1px solid $list-wp-border-color;
-    }
+  &.item-wp.item-block > .item-inner {
+    border-bottom: 1px solid $list-wp-border-color;
+  }
 
-    &:last-child > .item-inner {
-        border-bottom: 0;
-    }
+  &:last-child > .item-inner {
+    border-bottom: 0;
+  }
 }
 
 @mixin core-selected-item($selected-color) {
-    @include border-start(5px, solid, $selected-color);
+  @include border-start(5px, solid, $selected-color);
 
-    &.item-md {
-        @include padding(null, null, null, $item-md-padding-start - 5px);
-    }
-    &.item-ios {
-        @include padding(null, null, null, $item-ios-padding-start - 5px);
-    }
-    &.item-wp {
-        @include padding(null, null, null, $item-wp-padding-start - 5px);
-    }
+  &.item-md {
+    @include padding(null, null, null, $item-md-padding-start - 5px);
+  }
+  &.item-ios {
+    @include padding(null, null, null, $item-ios-padding-start - 5px);
+  }
+  &.item-wp {
+    @include padding(null, null, null, $item-wp-padding-start - 5px);
+  }
 }
 
 // Font Awesome
