@@ -254,7 +254,7 @@ function setAppMenu() {
                     label: 'Docs',
                     accelerator: 'CmdOrCtrl+H',
                     click() {
-                        shell.openExternal('https://docs.moodle.org/en/Moodle_Mobile');
+                        shell.openExternal('https://www.clinicianfirst.com/help');
                     }
                 }
             ]

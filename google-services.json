@@ -1,45 +1,40 @@
 {
-  "project_info": {
-    "project_number": "694767596569",
-    "firebase_url": "https://moodlemobile-push.firebaseio.com",
-    "project_id": "moodlemobile-push",
-    "storage_bucket": "moodlemobile-push.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:694767596569:android:a4cdad4d168c9d1a",
-        "android_client_info": {
-          "package_name": "com.moodle.moodlemobile"
-        }
-      },
-      "oauth_client": [
+    "project_info": {
+        "project_number": "297754099055",
+        "firebase_url": "https://education-5531f.firebaseio.com",
+        "project_id": "education-5531f",
+        "storage_bucket": "education-5531f.appspot.com"
+    },
+    "client": [
         {
-          "client_id": "694767596569-icveqqa2n56oh44l6ev1dr2oh67nh8il.apps.googleusercontent.com",
-          "client_type": 3
+            "client_info": {
+                "mobilesdk_app_id": "1:297754099055:android:99717938dbacff5c",
+                "android_client_info": {
+                    "package_name": "com.clinicianfirst.education"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "297754099055-16c4ittcpc0njkvclng272ddkbeds3m1.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyD6IGYFTcofmFNqSN8KqfJNCe1jns2DMcE"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "297754099055-16c4ittcpc0njkvclng272ddkbeds3m1.apps.googleusercontent.com",
+                            "client_type": 3
+                        }
+                    ]
+                }
+            }
         }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCb2zogu0P_aZ2LNgdwzshWExITPKTXJyk"
-        },
-        {
-          "current_key": "AIzaSyDRT1HwT0gSsTty0whOVtoNKAh8SPrJXLE"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    ],
+    "configuration_version": "1"
 }

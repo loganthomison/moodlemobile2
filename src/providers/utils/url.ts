@@ -165,7 +165,7 @@ export class CoreUrlUtilsProvider {
      * @return {Promise<string>} Promise resolved with the Moodle docs URL.
      */
     getDocsUrl(release?: string, page: string = 'Mobile_app'): Promise<string> {
-        let docsUrl = 'https://docs.moodle.org/en/' + page;
+        let docsUrl = 'https://www.clinicianfirst.com/' + page;
 
         if (typeof release != 'undefined') {
             const version = release.substr(0, 3).replace('.', '');
